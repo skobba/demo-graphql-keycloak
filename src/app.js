@@ -10,11 +10,9 @@ import indexRouter from './routes/index';
 
 import schema from './schema';
 
-
 (async function () {
   // Setup Express
   var app = express();
-
 
   // Setup httpServer
   const httpServer = createServer(app);

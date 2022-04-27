@@ -3,6 +3,10 @@ export default {
     return 'Hello!!';
   },
   listProjects: (parent, args, context, info) => {
-    return [{title: "First project"}, {title: "Second project"}, {title: "Third project"}];
+    return [
+      { title: 'First project' },
+      { title: 'Second project' },
+      { title: 'Third project' },
+    ];
   },
 };
