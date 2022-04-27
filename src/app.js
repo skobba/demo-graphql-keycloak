@@ -4,8 +4,11 @@ import path from 'path';
 import cookieParser from 'cookie-parser';
 import { createServer } from 'http';
 import logger from 'morgan';
+import { ApolloServer } from 'apollo-server-express';
 
 import indexRouter from './routes/index';
+
+import schema from './schema';
 
 
 (async function () {
@@ -17,15 +20,15 @@ import indexRouter from './routes/index';
   const httpServer = createServer(app);
 
   // Setup and Start ApolloServer
-  // const server = new ApolloServer({
-  //   schema,
-  //   context: ({ req, res }) => ({ req, res }),
-  //   introspection: true,
-  // });
-  // await server.start();
+  const server = new ApolloServer({
+    schema,
+    context: ({ req, res }) => ({ req, res }),
+    introspection: true,
+  });
+  await server.start();
 
   // Setup Middleware
-  // server.applyMiddleware({ app });
+  server.applyMiddleware({ app });
 
   // Setup logger, urlencoder, cookieparser and static
   app.use(logger('dev'));

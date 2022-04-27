@@ -6,9 +6,13 @@
     "start": "nodemon --exec babel-node ./src/app.js"
   },
   "dependencies": {
+    "apollo-server-express": "^3.6.7",
+    "body-parser": "^1.20.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
+    "graphql": "^16.4.0",
+    "graphql-tools": "^8.2.8",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
   },
