@@ -1,0 +1,44 @@
+{
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "ecmaVersion": 7,
+    "sourceType": "module",
+    "ecmaFeatures": {
+        "jsx": true
+    }
+  },
+  "extends": [
+    "prettier"
+  ],
+  "plugins": [
+    "prettier",
+    "babel"
+  ],
+  "rules": {
+    "semi": 0,  
+    "prettier/prettier": [
+      "error",
+      {
+        "semi": true,
+        "singleQuote": true,
+        "endOfLine": "auto"
+      }
+    ],
+    "no-console": [
+      "error",
+      {
+        "allow": [
+          "warn",
+          "error"
+        ]
+      }
+    ],
+    "import/no-extraneous-dependencies": "off",
+    "no-restricted-globals": "off",
+    "no-param-reassign": "off",
+    "class-methods-use-this": "off",
+    "import/prefer-default-export": "off",
+    "no-irregular-whitespace": "off",
+    "no-unused-expressions": "off"
+  }
+}

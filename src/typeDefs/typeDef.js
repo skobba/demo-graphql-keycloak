@@ -1,5 +1,4 @@
 import { gql } from 'apollo-server-express';
-import Project from './Project';
 
 const typeDefs = gql`
   type Query {
